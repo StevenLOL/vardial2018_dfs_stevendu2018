@@ -1,0 +1,146 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Bojanowski \bgroup et al.\egroup
+  }2017]{bojanowski2017enriching}
+Piotr Bojanowski, Edouard Grave, Armand Joulin, and Tomas Mikolov.
+\newblock 2017.
+\newblock Enriching word vectors with subword information.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  5:135--146.
+
+\bibitem[\protect\citename{Genkin \bgroup et al.\egroup
+  }2007]{004017007000000245}
+Alexander Genkin, David~D Lewis, and David Madigan.
+\newblock 2007.
+\newblock Large-scale bayesian logistic regression for text categorization.
+\newblock {\em Technometrics}, 49(3):291--304.
+
+\bibitem[\protect\citename{{Howard} and {Ruder}}2018]{2018arXiv180106146H}
+J.~{Howard} and S.~{Ruder}.
+\newblock 2018.
+\newblock {Universal Language Model Fine-tuning for Text Classification}.
+\newblock {\em ArXiv e-prints}, January.
+
+\bibitem[\protect\citename{Iyyer \bgroup et al.\egroup }2015]{Iyyer2015Deep}
+Mohit Iyyer, Varun Manjunatha, Jordan Boyd-Graber, and Hal~Daumé Iii.
+\newblock 2015.
+\newblock Deep unordered composition rivals syntactic methods for text
+  classification.
+\newblock In {\em Meeting of the Association for Computational Linguistics and
+  the International Joint Conference on Natural Language Processing}, pages
+  1681--1691.
+
+\bibitem[\protect\citename{Joachims}1998]{10.1007/BFb0026683}
+Thorsten Joachims.
+\newblock 1998.
+\newblock Text categorization with support vector machines: Learning with many
+  relevant features.
+\newblock In Claire N{\'e}dellec and C{\'e}line Rouveirol, editors, {\em
+  Machine Learning: ECML-98}, pages 137--142, Berlin, Heidelberg. Springer
+  Berlin Heidelberg.
+
+\bibitem[\protect\citename{Joulin \bgroup et al.\egroup }2016]{joulin2016bag}
+Armand Joulin, Edouard Grave, Piotr Bojanowski, and Tomas Mikolov.
+\newblock 2016.
+\newblock Bag of tricks for efficient text classification.
+\newblock {\em arXiv preprint arXiv:1607.01759}.
+
+\bibitem[\protect\citename{Kenter \bgroup et al.\egroup
+  }2016]{Kenter2016Siamese}
+Tom Kenter, Alexey Borisov, and Maarten~De Rijke.
+\newblock 2016.
+\newblock Siamese cbow: Optimizing word embeddings for sentence
+  representations.
+\newblock In {\em Meeting of the Association for Computational Linguistics},
+  pages 941--951.
+
+\bibitem[\protect\citename{{Kim}}2014]{2014arXiv1408.5882K}
+Y.~{Kim}.
+\newblock 2014.
+\newblock {Convolutional Neural Networks for Sentence Classification}.
+\newblock {\em ArXiv e-prints}, August.
+
+\bibitem[\protect\citename{Kusner \bgroup et al.\egroup }2015]{Kusner2015From}
+Matt~J. Kusner, Yu~Sun, Nicholas~I. Kolkin, and Kilian~Q. Weinberger.
+\newblock 2015.
+\newblock From word embeddings to document distances.
+\newblock In {\em International Conference on International Conference on
+  Machine Learning}, pages 957--966.
+
+\bibitem[\protect\citename{Le and Mikolov}2014]{Le2014Distributed}
+Quoc~V Le and Tomas Mikolov.
+\newblock 2014.
+\newblock Distributed representations of sentences and documents.
+\newblock 4:II--1188.
+
+\bibitem[\protect\citename{Mccallum}1998]{Mccallum1998A}
+A~Mccallum.
+\newblock 1998.
+\newblock A comparison of event models for naive bayes text classification.
+\newblock {\em IN AAAI-98 WORKSHOP ON LEARNING FOR TEXT CATEGORIZATION}, pages
+  41--48.
+
+\bibitem[\protect\citename{Mikolov \bgroup et al.\egroup
+  }2013]{Mikolov2013Distributed}
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock 2013.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock {\em Advances in Neural Information Processing Systems},
+  26:3111--3119.
+
+\bibitem[\protect\citename{Pennington \bgroup et al.\egroup
+  }2014]{Pennington2014Glove}
+Jeffrey Pennington, Richard Socher, and Christopher Manning.
+\newblock 2014.
+\newblock Glove: Global vectors for word representation.
+\newblock In {\em Conference on Empirical Methods in Natural Language
+  Processing}, pages 1532--1543.
+
+\bibitem[\protect\citename{{Sabour} \bgroup et al.\egroup
+  }2017]{2017arXiv171009829S}
+S.~{Sabour}, N.~{Frosst}, and G.~{E Hinton}.
+\newblock 2017.
+\newblock {Dynamic Routing Between Capsules}.
+\newblock {\em ArXiv e-prints}, October.
+
+\bibitem[\protect\citename{Vaswani \bgroup et al.\egroup
+  }2017]{Vaswani2017Attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock 2017.
+\newblock Attention is all you need.
+
+\bibitem[\protect\citename{{Wieting} \bgroup et al.\egroup
+  }2015]{2015arXiv151108198W}
+J.~{Wieting}, M.~{Bansal}, K.~{Gimpel}, and K.~{Livescu}.
+\newblock 2015.
+\newblock {Towards Universal Paraphrastic Sentence Embeddings}.
+\newblock {\em ArXiv e-prints}, November.
+
+\bibitem[\protect\citename{Ye \bgroup et al.\egroup }2017]{Ye2017Determining}
+Jianbo Ye, Yanran Li, Zhaohui Wu, James~Z. Wang, Wenjie Li, Jia Li, Jianbo Ye,
+  Yanran Li, Zhaohui Wu, and James~Z. Wang.
+\newblock 2017.
+\newblock Determining gains acquired from word embedding quantitatively using
+  discrete distribution clustering.
+\newblock In {\em Meeting of the Association for Computational Linguistics},
+  pages 1847--1856.
+
+\bibitem[\protect\citename{Zhang \bgroup et al.\egroup }2008]{4811259}
+W.~Zhang, T.~Yoshida, and X.~Tang.
+\newblock 2008.
+\newblock Tfidf, lsi and multi-word in information retrieval and text
+  categorization.
+\newblock In {\em 2008 IEEE International Conference on Systems, Man and
+  Cybernetics}, pages 108--113, Oct.
+
+\bibitem[\protect\citename{{Zhao} \bgroup et al.\egroup
+  }2018]{2018arXiv180400538Z}
+W.~{Zhao}, J.~{Ye}, M.~{Yang}, Z.~{Lei}, S.~{Zhang}, and Z.~{Zhao}.
+\newblock 2018.
+\newblock {Investigating Capsule Networks with Dynamic Routing for Text
+  Classification}.
+\newblock {\em ArXiv e-prints}, March.
+
+\end{thebibliography}

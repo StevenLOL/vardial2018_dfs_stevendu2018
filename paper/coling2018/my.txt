@@ -1,0 +1,85 @@
+System description STEVENDU2018 at VarDial2018
+
+Abstract
+This paper introduces the submitted system for team STEVENDU2018 during VarDial2018 on task Duth and Flemish. Many attempts post evalution are also presented, the results obained indicate it is a challange task to discumte Duth and Flemish through linguatstic information.
+
+Introducation 
+
+The VarDial2018 task[] is a supervised learning task to classify text into Duth or Flemish.  Dutch is the language spoken in Finland and Femlish is spoken in Bel area.
+There are 30000 labeled training data, 500 labeled development data. F1 score is the evlaution metrics.
+
+This paper is orgnized as following : first the the submitted system will be introduced followed by other system that examed post evaluation. 
+
+Systems explored during evaluation
+
+
+Bag-of-ngram
+The submitted system is a bag-of-ngram system. 1st the text is lowercased and converted to thri-gram tokens with mininal document frequency of 5. The extracted features are then used to train a Linear SVM model. A 20 folds cross validation is performed on the training set, the average F1 score obained through cross validation is 0.63 and 0.69 is obained on the dev set. 
+
+Dual CNN
+This approach builds simplied CNN model (embedding-converlution-pooling) for each language , the outputs of the two CNN networks are then concatenated together. This is followed by a fully connected layer for classification task. The detail of this network can be found at []. During evluation peroid the proposed Dual CNN network obtain 0.62 through cross validation and 0.61 on the dev set.
+The final submitted system is only a bag-of-ngram model which performance better then Dual CNN.
+#As there is limited computing resource and time, only a 
+
+Evaulation results
+
+Figure 1 shows F1 score for all submitted system, the score is ranging from 0.55 to 0.66 , our bag-of-ngram, the most simple approach yied 0.623. On the other hand the proposed Dual CNN yied 0.621.
+
+The test score correlated well with local cross validation score, the development set is not a good choice for model selection. The best score is only 0.66, it imply the question setting is challagning. 
+
+Post evaluation system
+Since the bag-of-ngram system only achive 0.623 on the test set, to achive a better result a series studies had been carry out after the evaluation period. These studies can broadly divided into two groups: one group focus on finding the vector presentation for given text data, another group methods focus on deep learning.
+
+vector presentation based approach
+
+Vector representation appraoch intend to convert text data in variable-length pieces of text to a length fixed low dimanitalty vector. There are line of works , only two basic approach are examed: through averaging word vector and through doc2vec. 
+
+
+#The bag-of-ngram appraoch can also consider one type of them but the with a spare vector . 
+
+
+Via average word vector, or with TFIDF weighted sum with compositional vector grammars. In this study , we use FastText for training word vectors.  #as well as generating the mean sentence vector.
+
+wordVector	40 	100 	200 	250 	300 	400 
+sentence vector	0.5642	0.5848	0.5922	0.5912	0.598	0.6024
+
+Table 1 shows with increase of size of word vectors, the system performance better. A 400 diminail word vector is well suit for the task.
+ 
+Via doc2vec, in this study we use the doc2vec from gensim. The doc2vec model is trained with training set with output sentense vector size of 100 ,minnal word is set to 5 and window size of 8.
+wordVector	100	200 	300 
+sentence vector	0.5282	0.5246	0.5308
+
+Distributed representation of Sentences and Documents.
+
+Two set of sentence vector had been used in this study, the average word vector approach is better than doc2vec approach. In the following experiment, 400 is used as the default size of word embeddings.
+
+Deep learning based approach
+Our proposed Dual-CNN didn’t beat the conventional bag-of-ngram model. So it is better examine the performance of the deep learning from most simple arthictive to complex .
+Four type of deep learning based approaches are designed for this task, started from the most basic architecture, they are:
+
+1 MLP The MLP system is build by an embedding layer, one flatten layer and fully connected  layer.
+2 AVERAGE The Average system is similar to MLP system but the flatten layer is replaced by a average pooling layer.
+3 GRU  The GRU system is similar to AVERAGE system but the average pooling layer is replaced by a bidirectional GRU layer.
+4 CNN_LSTM The CNN_LSTM system is build by an embedding layer followed two by convolution-pooling and one bidirectional GRU layer.
+
+System	D20 Random	D400 Random	D400 Pretrained
+MLP	0.6350	0.6365	0.6334
+AVERAGE	0.6352	0.6356	0.6402
+GRU	0.6299	0.6333	
+CNN_LSTM	0.6352	0.6421	0.6362
+
+
+
+
+Approachese that not work 
+1)Have more ‘Flemish’ data?
+2)1D CNN
+3)Capsulenet
+Systems that leave for further explore
+
+
+
+
+
+ 
+ Parsing with compositional vector grammars

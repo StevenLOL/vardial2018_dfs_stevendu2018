@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: coling2018.aux
+The style file: acl.bst
+Database file #1: cite.bib.bib
+Repeated entry---line 78 of file cite.bib.bib
+ : @article{Le2014Distributed
+ :                           ,
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 200 of file cite.bib.bib
+ :  
+ :  adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171009829S},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty journal in Le2014Distributed
+Warning--empty journal in Vaswani2017Attention
+You've used 19 entries,
+            2490 wiz_defined-function locations,
+            665 strings with 8278 characters,
+and the built_in function-call counts, 8983 in all, are:
+= -- 922
+> -- 417
+< -- 8
++ -- 145
+- -- 144
+* -- 663
+:= -- 1424
+add.period$ -- 76
+call.type$ -- 19
+change.case$ -- 147
+chr.to.int$ -- 19
+cite$ -- 21
+duplicate$ -- 375
+empty$ -- 627
+format.name$ -- 165
+if$ -- 1906
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 19
+newline$ -- 116
+num.names$ -- 59
+pop$ -- 157
+preamble$ -- 1
+purify$ -- 166
+quote$ -- 0
+skip$ -- 318
+stack$ -- 0
+substring$ -- 438
+swap$ -- 118
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 152
+warning$ -- 2
+while$ -- 62
+width$ -- 22
+write$ -- 266
+(There were 2 error messages)
