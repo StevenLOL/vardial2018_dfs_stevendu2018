@@ -43,7 +43,7 @@ Since bag-of-ngram system only score 0.623 on test set, to achieve better result
 
 Vector representation based approach
 
-Vector representation approach intend to convert text data in variable-length pieces of text into a length fixed low dimension vector. There are many works have been done in this direction (Kim, 2014; Wieting et al., 2015; Kusner et al., 2015; Kenter et al., 2016; Ye et al., 2017), only two basic approaches are investigated: vector representation through take mean word vector and through doc2vec from the work in distributed representation of sentences and documents (Le and Mikolov, 2014).
+Vector representation approach intends to convert text data in variable-length pieces of text into a length fixed low dimension vector. There are many works have been done in this direction (Kim, 2014; Wieting et al., 2015; Kusner et al., 2015; Kenter et al., 2016; Ye et al., 2017), only two basic approaches are investigated: vector representation through take mean word vector and through doc2vec from the work in distributed representation of sentences and documents (Le and Mikolov, 2014).
 
 Mean word vector system 
 
