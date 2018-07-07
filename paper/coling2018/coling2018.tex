@@ -56,7 +56,7 @@
 
 
 \begin{abstract}
-  This paper introduces the submitted system for team STEVENDU2018 during VarDial 2018 Discriminating between Dutch and Flemish in Subtitles(DFS). Post evaluation analyses are also presented, the results obtained indicate that it is a challenging task to discriminate between Dutch and Flemish.
+  This paper introduces the submitted system for team STEVENDU2018 during VarDial 2018 Discriminating between Dutch and Flemish in Subtitles(DFS). Post evaluation analyses are also presented. The results obtained indicate that it is a challenging task to discriminate between Dutch and Flemish.
 \end{abstract}
 
 
@@ -94,15 +94,15 @@
      License details:
      \url{http://creativecommons.org/licenses/by/4.0/}
 }
-The VarDial2018 task
+The DFS task
 %\footnote{\url{http://alt.qcri.org/vardial2018/}} 
-is a supervised learning task to classify text into Dutch or Flemish. Dutch is the language spoken in Netherlands and Flemish is variant of Dutch language and known as Belgian Dutch. There are 300000 labeled training data, 500 labeled development data, 20000 on-hold test data. DUT in training labels denotes Dutch and BEL is refer o Flemish. F1 score is the evaluation metrics. %The ultimate goal is to discover approaches for Dutch and Flemish discriminant.
+is a supervised learning task to classify text into Dutch or Flemish. Dutch is the language spoken in the Netherlands and Flemish is a variant of Dutch language and also known as Belgian Dutch. There are 300000 labeled training data, 500 labeled development data, 20000 on-hold test data. DUT in training data denotes Dutch, and BEL is the label for Flemish. F1 score is the evaluation metrics.  %The ultimate goal is to discover approaches for Dutch and Flemish discriminant.
 
-This paper is organized as follow: a brief training data analysis will be given, then systems trained during evaluation will be introduced, finally more system will be explored for post evaluation analysis. 
+This paper is structured as follows: first, a brief training data analysis will be given. Then systems trained during the evaluation will be introduced. Finally more systems will be explored for post evaluation analysis.
 
 \section{Data analysis}
 
-Training data set consists of 300000 labeled sentences. After being lower cased and tokenized, the sentences length and number of words for both DUT and BEL have identical distribution. Average sentence length and number of words per sentence are nearly the same. As shown in Table~\ref{vocab}, it is a well balanced data set. It is worth to notice that the two languages share 57.2\% of vocabulary.
+The training data set consists of 300000 labeled sentences. After being lower cased and tokenized, the average sentence's length in characters and number of words for both DUT and BEL is nearly the same. As showed in Table ~\ref{vocab}, it is a well balanced data set. It is worth to note that the two languages share 57.2\% of vocabulary.
 
  
 \begin{table}[h]
@@ -114,7 +114,7 @@ Training data set consists of 300000 labeled sentences. After being lower cased 
 		
 		Dialect & DUT & BEL \\ \hline
 		Number of samples & 150000 & 150000  \\ \hline
-		Average sentence length & 187.86 & 187.90 \\ \hline
+		Average sentence length in characters & 187.86 & 187.90 \\ \hline
 		Average number of words per sentence & 40.36 & 40.35 \\ \hline
 		Unique words & 115560 & 115442 \\ \hline 
 		Shared words & \multicolumn{2}{|c|}{66142}  \\ \hline
@@ -124,7 +124,7 @@ Training data set consists of 300000 labeled sentences. After being lower cased 
 	\label{vocab}
 \end{table}
 
-One interesting finding is that the usage of punctuations is a little bit different. BEL has more comma, period and question marks but less exclamation marks than DUT as shown in Table~\ref{punctuations}.
+One interesting finding is that the use of punctuation is a little bit different. BEL has more commas, periods and question marks but less exclamation marks than DUT as showed in Table~\ref{punctuations}.
 
 \begin{table}[h]
 	\centering

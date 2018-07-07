@@ -5,25 +5,29 @@ This paper introduces the submitted system for team STEVENDU2018 during VarDial 
 
 Introduction 
 
-The DFS task is a supervised learning task to classify text into Dutch or Flemish. Dutch is the language spoken in the Netherlands and Flemish is a variant of Dutch language and also known as Belgian Dutch. There are 300000 labeled training data, 500 labeled development data, 20000 on-hold test data. DUT in training labels denotes Dutch, and BEL is the label for Flemish. F1 score is the evaluation metrics. This paper is structured as follows: first, a brief training data analysis will be given. Then systems trained during the evaluation will be introduced. Finally more systems will be explored for post evaluation analysis.
+The DFS task is a supervised learning task to classify text into Dutch or Flemish. Dutch is the language spoken in the Netherlands and Flemish is a variant of Dutch language and also known as Belgian Dutch. There are 300000 labeled training data, 500 labeled development data, 20000 on-hold test data. DUT in training labels denotes Dutch, and BEL is the label for Flemish. F1 score is the evaluation metrics. 
+
+This paper is structured as follows: first, a brief training data analysis will be given. Then systems trained during the evaluation will be introduced. Finally more systems will be explored for post evaluation analysis.
 
 Data analysis 
 
-The training data set consists of 300000 labeled sentences. After being lower cased and tokenized, the sentences length in characters and number of words for both DUT and BEL are nearly the same. As shown in Table 1, it is a well balanced data set. It is worth to notice that the two languages share 57.2% of vocabulary.
+The training data set consists of 300000 labeled sentences. After being lower cased and tokenized, the average sentence's length in characters and number of words for both DUT and BEL is nearly the same. As showed in Table 1, it is a well balanced data set. It is worth to note that the two languages share 57.2% of vocabulary.
 
-One interesting finding is that the usage of punctuation is a little bit different. BEL has more commas, period and question marks but less exclamation marks than DUT as shown in Table 2.  
+
+One interesting finding is that the use of punctuation is a little bit different. BEL has more commas, periods and question marks but less exclamation marks than DUT as showed in Table 2.
+  
+Statistics for the punctuation in the training data set.
 
 Systems trained during evaluation
 
 There are two systems trained during evaluation: a bag-of-ngram model and dual convolutional neural network model.
-Statistics for the punctuations in training data set.
 
 
 Bag-of-ngram
 
-Conventional methods for text classification apply common features such as bag-of-words, n-grams, and their TF-IDF features (Zhang et al., 2008) as input of machine learning algorithms such as support vector machine (SVM) (Joachims, 1998), logistic regression (Genkin et al., 2007), naive Bayes (NB) (Mccallum, 1998) for classification. 
+Conventional methods for text classification apply common features such as bag-of-words, n-grams, and their TF-IDF features (Zhang et al., 2008) as input of machine learning algorithms such as support vector machine (SVM) (Joachims, 1998), logistic regression (Genkin et al., 2007), naive Bayes (NB) (Mccallum, 1998). 
 
-In this work the bag-of-ngram system and Linear SVM is used as baseline system. First the text is lower-cased and converted to n-gram tokens (n is from 1 to 3), then filtered by TF-IDF with minimal document frequency of 5. Extracted features are used to train a linear SVM classifier. A 20 folds cross validation is performed on the training set, the average F1 score is 0.63 and 0.69 is obtained on the development set.
+In this work, the bag-of-ngram system and Linear SVM are used as the baseline system. First the text is lower-cased and converted to n-gram tokens (n is from 1 to 3), then filtered by TF-IDF with minimal document frequency of 5. Extracted features are utilized to train a linear SVM classifier. A 20 folds cross validation is performed on the training set, the average F1 score is 0.63 and 0.69 is obtained on the development set.
 
 Dual-CNN
 
@@ -33,34 +37,55 @@ The final submitted system is only a bag-of-ngram model which has better perform
 
 Evaluation results
 
-The scores on the released test set range from 0.55 to 0.66 in Table 3, our bag-of-ngram, the most simple approach yields 0.623. On the other hand proposed Dual-CNN yields 0.621. The test score correlated well with the local cross validation score, development set is not a good choice for model selection. The best score is only 0.66, which implies that the DFS task is challenging.
+The score on the released test set range from 0.55 to 0.66 in Table 3, our bag-of-ngram, the most simple approach yields 0.623. On the other hand proposed Dual-CNN yields 0.621. The test score correlated well with the local cross validation score, development set is not the right choice for model selection. The best score is just 0.66, which implies that the DFS task is challenging.
 
 
 Post evaluation systems
 
-Since bag-of-ngram system only score 0.623 on test set, to achieve better result a series of studies had been carry out after the evaluation. These can be broadly divided into three groups: one group focus on finding the vector representation for given text data, another group focus on deep learning approaches, third group utilize existing text classification framework.
+Since bag-of-ngram system only scores 0.623 on test set, to achieve better result a series of studies had been carried out after the evaluation. These can be broadly divided into three groups: one group focus on finding the vector representation for the given text data, another group focus on deep learning approaches, third group utilize existing text classification framework.
 
 
 Vector representation based approach
 
-Vector representation approach intends to convert text data in variable-length pieces of text into a length fixed low dimension vector. There are many works have been done in this direction (Kim, 2014; Wieting et al., 2015; Kusner et al., 2015; Kenter et al., 2016; Ye et al., 2017), only two basic approaches are investigated: vector representation through take mean word vector and through doc2vec from the work in distributed representation of sentences and documents (Le and Mikolov, 2014).
+Vector representation approach intends to convert text data in variable-length pieces of text into a fixed-length low dimension vector. There are many works have been done in this direction (Kim, 2014; Wieting et al., 2015; Kusner et al., 2015; Kenter et al., 2016; Ye et al., 2017), but only two basic approaches are investigated here: by taking mean value of word vectors and through doc2vec from the work in distributed representation of sentences and documents (Le and Mikolov, 2014).
 
 Mean word vector system 
 
-A popular idea in modern machine learning is to represent words by vectors. These vectors capture hidden information about a language, like word analogies or semantic. Common used word vectors are word2vec (Mikolov et al., 2013), Glove (Pennington et al., 2014) and fastText (Bojanowski et al., 2017). Compare to word2vec, FastText is capable to capture sub-word information, thus in this study, we use FastText to train word vectors. Skip-gram, window size of 5 and minimal word count of 5 , 5 negative samples, sub-word range is between 3 and 6 characters are the default training parameters. After training, for each sentence, the mean word vector is used as its feature, Linear Discriminant Analysis classifier is selected as the learning algorithm.
+A popular idea in modern machine learning is to represent words by vectors. These vectors capture hidden information about a language, like word analogies or semantic. Commonly used word vector is word2vec (Mikolov et al., 2013), Glove (Pennington et al., 2014) and fastText (Bojanowski et al., 2017). Compare to word2vec, FastText is capable to capture sub-word information, thus in this study, we use FastText to train word vectors. Skip-gram, window size of 5 and minimal word count of 5, 5 negative samples, sub-word range is between 3 and 6 characters are the default training parameters. After training, for each sentence, the mean value of its word vectors is used as feature, Linear Discriminant Analysis classifier is selected as the classifier.
 
-Table 1 shows F1 score for the mean word vector system. With increase of the length of word vectors, the system performance better. The 400 dimensional word vector is well suited for this task.
+Table 1 shows F1 score for the mean word vector system. With increase in the length of word vectors, the system performance better. The 400 dimensional word vector is suitable for this task.
+
 
 
 Doc2vec
 
-In this study we use the doc2vec (Le and Mikolov, 2014) from gensim3 . The doc2vec model is trained on training set with minimal word occurrence of 5 and window size of 8. Table 5 shows the best score is 0.5308, slightly better than random guess.
+In this study, we use the doc2vec (Le and Mikolov, 2014) from gensim3. The doc2vec model is trained on training data set with minimal word occurrence of 5 and window size of 8. Table 5 shows the best score is 0.5308, which is slightly better than random guess.
 
-Two set of sentence vector had been used in this study, the average word vector approach is better than doc2vec. In the following experiment, 400 is used as the default size of word embedding.
+Two sets of sentence vector had been evaluated in this study. The average word vector approach is better than doc2vec. In the following experiment, 400 is used as the default size of word embedding.
 
-Our proposed Dual-CNN didn’t beat the conventional bag-of-ngram model. This motivated us to examine the performance of deep learning approaches. Five type of deep learning based approaches are investigated, started from the most basic architecture, they are:
+Our proposed Dual-CNN didn’t beat the conventional bag-of-ngram model. This motivated us to examine the performance of deep learning approaches. Five types of deep learning based approaches are investigated, started from the most basic architecture, they are:
 
-The MLP system is build by an embedding layer, one flatten layer and fully connected layer. Please refer to system diagrams in github repository.
+The MLP system is built by an embedding layer, one flatten layer and fully connected layer. Please refer to system diagrams in github repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
 
 The Average system is similar to MLP system but the flatten layer is replaced by an average pooling layer. It is also known as neural bag-of-word model and being surprisingly effective for many tasks (Iyyer et al., 2015).
 
@@ -84,4 +109,3 @@ Table 8: FastText Classification results. The 0.6476 is the highest score achiev
 Conclusion
 
 In this paper, a wide range of systems have been evaluated for the ValDial 2018 DFS task. A bag of-ngram system score 0.6230 and serves as the baseline. Complex systems such as Dual-CNN and CapusleNet have competitive score to baseline system. Four simple deep learning based methods outperform baseline, three of them are higher than 0.64. FastText is identified as the best single system, yielded a F1 score of 0.6476.
-
