@@ -104,6 +104,15 @@ S.~{Sabour}, N.~{Frosst}, and G.~{E Hinton}.
 \newblock {Dynamic Routing Between Capsules}.
 \newblock {\em ArXiv e-prints}, October.
 
+\bibitem[\protect\citename{{van der Lee} and {van den
+  Bosch}}2017]{vanderlee:2017:VarDial}
+Chris {van der Lee} and Antal {van den Bosch}.
+\newblock 2017.
+\newblock {Exploring Lexical and Syntactic Features for Language Variety
+  Identification}.
+\newblock In {\em Proceedings of the Fourth Workshop on NLP for Similar
+  Languages, Varieties and Dialects (VarDial)}, Valencia, Spain.
+
 \bibitem[\protect\citename{Vaswani \bgroup et al.\egroup
   }2017]{Vaswani2017Attention}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
@@ -126,6 +135,19 @@ Jianbo Ye, Yanran Li, Zhaohui Wu, James~Z. Wang, Wenjie Li, Jia Li, Jianbo Ye,
   discrete distribution clustering.
 \newblock In {\em Meeting of the Association for Computational Linguistics},
   pages 1847--1856.
+
+\bibitem[\protect\citename{Zampieri \bgroup et al.\egroup
+  }2018]{zampieri-EtAl:2018:VarDial}
+Marcos Zampieri, Shervin Malmasi, Preslav Nakov, Ahmed Ali, Suwon Shuon, James
+  Glass, Yves Scherrer, Tanja Samard\v{z}i{\'c}, Nikola Ljube\v{s}i\'{c},
+  J\"{o}rg Tiedemann, Chris {van der Lee}, Stefan Grondelaers, Nelleke
+  Oostdijk, Antal {van den Bosch}, Ritesh Kumar, Bornini Lahiri, and Mayank
+  Jain.
+\newblock 2018.
+\newblock {Language Identification and Morphosyntactic Tagging: The Second
+  VarDial Evaluation Campaign}.
+\newblock In {\em Proceedings of the Fifth Workshop on NLP for Similar
+  Languages, Varieties and Dialects (VarDial)}, Santa Fe, USA.
 
 \bibitem[\protect\citename{Zhang \bgroup et al.\egroup }2008]{4811259}
 W.~Zhang, T.~Yoshida, and X.~Tang.
